@@ -2,6 +2,28 @@ import React from 'react';
 import Navbar from './Navbar';
 
 const Home = () => {
+  // Blog post data
+  const blogPosts = [
+    {
+      title: 'Calendar and Newsletter',
+      date: 'June 24, 2021',
+      image: 'https://scontent-mba1-1.xx.fbcdn.net/v/t1.6435-9/189886691_896796587540726_432644374218936796_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f7fc3c&_nc_eui2=AeE_N6g9V1s_hEwnSHWMp5w4uZPr9zhLT1e5k-v3OEtPVwo91e7J-tFQrVtcbkhqoNSbTx3xQ1Qs0RGC6Wa2UkLT&_nc_ohc=QUndNBYuR-AQ7kNvgGO4VkF&_nc_ht=scontent-mba1-1.xx&oh=00_AYCYlH78qzEeNc_hem0xOH1zSyb2dSfSw_cYCg2Ds7VHJw&oe=66F962D5',
+      link: '#',
+    },
+    {
+      title: 'School News',
+      date: 'October 4, 2021',
+      image: 'https://scontent-mba1-1.xx.fbcdn.net/v/t1.6435-9/189886691_896796587540726_432644374218936796_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f7fc3c&_nc_eui2=AeE_N6g9V1s_hEwnSHWMp5w4uZPr9zhLT1e5k-v3OEtPVwo91e7J-tFQrVtcbkhqoNSbTx3xQ1Qs0RGC6Wa2UkLT&_nc_ohc=QUndNBYuR-AQ7kNvgGO4VkF&_nc_ht=scontent-mba1-1.xx&oh=00_AYCYlH78qzEeNc_hem0xOH1zSyb2dSfSw_cYCg2Ds7VHJw&oe=66F962D5',
+      link: '#',
+    },
+    {
+      title: 'Student Voice',
+      date: 'October 20, 2021',
+      image: 'https://scontent-mba1-1.xx.fbcdn.net/v/t1.6435-9/189886691_896796587540726_432644374218936796_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f7fc3c&_nc_eui2=AeE_N6g9V1s_hEwnSHWMp5w4uZPr9zhLT1e5k-v3OEtPVwo91e7J-tFQrVtcbkhqoNSbTx3xQ1Qs0RGC6Wa2UkLT&_nc_ohc=QUndNBYuR-AQ7kNvgGO4VkF&_nc_ht=scontent-mba1-1.xx&oh=00_AYCYlH78qzEeNc_hem0xOH1zSyb2dSfSw_cYCg2Ds7VHJw&oe=66F962D5',
+      link: '#',
+    },
+  ];
+
   return (
     <div className="min-h-screen font-roboto">
       <Navbar />
@@ -90,21 +112,20 @@ const Home = () => {
         {/* Blog Post Section */}
         <div className="mt-12">
           <h1 className="text-white text-3xl text-center mb-8 font-playfair">Our Blog Post</h1>
-          <div className="flex flex-col lg:flex-row justify-center gap-8">
-            {/* Blog Post Cards */}
-            {['Calendar and Newsletter', 'School News', 'Student Voice'].map((title, index) => (
-              <div key={index} className="border border-white lg:w-[15%] h-[50vh] rounded-lg bg-white">
+          <div className="flex overflow-x-auto space-x-6 p-4">
+            {blogPosts.map((post, index) => (
+              <div key={index} className="border border-white flex-shrink-0 w-[300px] h-[50vh] rounded-lg bg-white">
                 <div className="h-[58%] overflow-hidden rounded-t-lg">
                   <img
-                    src="https://scontent-mba1-1.xx.fbcdn.net/v/t1.6435-9/189886691_896796587540726_432644374218936796_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f7fc3c&_nc_eui2=AeE_N6g9V1s_hEwnSHWMp5w4uZPr9zhLT1e5k-v3OEtPVwo91e7J-tFQrVtcbkhqoNSbTx3xQ1Qs0RGC6Wa2UkLT&_nc_ohc=QUndNBYuR-AQ7kNvgGO4VkF&_nc_ht=scontent-mba1-1.xx&oh=00_AYCYlH78qzEeNc_hem0xOH1zSyb2dSfSw_cYCg2Ds7VHJw&oe=66F962D5"
-                    alt={title}
+                    src={post.image}
+                    alt={post.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-4 text-center">
-                  <h2 className="text-gray-800 font-semibold font-playfair">{title}</h2>
-                  <p className="text-gray-500 text-sm">{index === 0 ? 'June 24, 2021' : index === 1 ? 'October 4, 2021' : 'October 20, 2021'}</p>
-                  <a href="#" className="text-purple-600 hover:underline">
+                  <h2 className="text-gray-800 font-semibold font-playfair">{post.title}</h2>
+                  <p className="text-gray-500 text-sm">{post.date}</p>
+                  <a href={post.link} className="text-purple-600 hover:underline">
                     Read more
                   </a>
                 </div>
@@ -138,7 +159,8 @@ const Home = () => {
           <span className="bg-purple-600 px-4 py-2 uppercase text-sm font-bold">Feature</span>
           <h2 className="text-4xl font-semibold mt-4">Campus</h2>
           <p className="mt-4 text-lg max-w-lg">
-            Who is included. Lorem ipsum dolor sit amet consectetur adipiscing elit. Error excepturi ad et libero...
+            Who is included. Lorem ipsum dolor sit amet consectetur adipiscing elit. Error excepturi, ducimus
+            asperiores cupiditate fugiat adipisci.
           </p>
         </div>
       </div>
