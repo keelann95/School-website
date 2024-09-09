@@ -113,7 +113,7 @@ const Home = () => {
         {/* Blog Post Section */}
         <div className="mt-12">
           <h1 className="text-white text-3xl text-center mb-8 font-playfair">Our Blog Post</h1>
-          <div className="flex overflow-x-auto space-x-6 p-4">
+          <div className="flex overflow-x-auto space-x-6 p-4 items-center justify-center">
             {blogPosts.map((post, index) => (
               <div key={index} className="border border-white flex-shrink-0 w-[300px] h-[50vh] rounded-lg bg-white">
                 <div className="h-[58%] overflow-hidden rounded-t-lg">
