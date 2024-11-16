@@ -7,7 +7,7 @@ const Gallery = () => {
   const galleryItems = Array(12).fill(null).map((_, index) => ({
     id: index + 1,
     title: `Gallery Item ${index + 1}`,
-    imageUrl: `/api/placeholder/300/300`
+    imageUrl: `https://plus.unsplash.com/premium_photo-1680807869780-e0876a6f3cd5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2Nob29sfGVufDB8fDB8fHww`
   }));
 
   return (

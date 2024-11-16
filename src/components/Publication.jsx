@@ -57,21 +57,21 @@ const Publication = () => {
                 published: '2021',
                 description:
                   'Body of Work showcases the collected work of the graduating MFA Class of 2020 and marks the fourth installment of Yale School of Art\'s all-school MFA book series.',
-                imgSrc: '/api/placeholder/150/150',
+                imgSrc: 'https://plus.unsplash.com/premium_photo-1691497254702-199439d62216?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIxfHx8ZW58MHx8fHx8',
               },
               {
                 title: 'Body of Work: Yale School of Art MFA 2019',
                 published: '2019',
                 description:
                   'Featuring a foreword by Stavros Niarchos Foundation Dean and Professor of Art Marta Kuzma, with contributions from Emma Gregoline and Emile Mausner.',
-                imgSrc: '/api/placeholder/150/150',
+                imgSrc: 'https://plus.unsplash.com/premium_photo-1691497254146-92e214d56016?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIzfHx8ZW58MHx8fHx8',
               },
               {
                 title: 'Sermon of the Nonresponse by Fred Moten',
                 published: '2018',
                 description:
                   'Sermon of the Nonresponse offers profound insights into modern art and culture with preamble by Stavros Niarchos Foundation Dean.',
-                imgSrc: '/api/placeholder/150/150',
+                imgSrc: 'https://plus.unsplash.com/premium_photo-1684367040537-87e72a2c9553?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIyfHx8ZW58MHx8fHx8',
               },
             ].map((publication, index) => (
               <div

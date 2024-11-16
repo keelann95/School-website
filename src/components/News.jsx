@@ -6,7 +6,7 @@ const NewsItem = ({ title, date, content, readMoreLink }) => (
   <div className="mb-8">
     <h2 className="text-3xl font-bold mb-2">{title}</h2>
     <p className="text-gray-500 mb-4">{date}</p>
-    <div className="bg-gray-200 w-full h-64 mb-4"></div>
+    <img src="https://images.unsplash.com/photo-1535905557558-afc4877a26fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D"className="object-cover object-center w-full h-64 mb-4" alt="#" />
     <p className="mb-4">{content}</p>
     <a href={readMoreLink} className="text-purple-600 hover:underline">Read More</a>
   </div>
@@ -14,7 +14,7 @@ const NewsItem = ({ title, date, content, readMoreLink }) => (
 
 const TrendingNewsItem = ({ title, date, content, readMoreLink }) => (
   <div className="mb-8">
-    <div className="bg-gray-200 w-full h-48 mb-4"></div>
+    <img src="https://images.unsplash.com/photo-1577036057060-d318e280b0c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" className="object-cover w-full h-48 mb-4" alt="#" />
     <h3 className="text-xl font-bold mb-2">{title}</h3>
     <p className="text-gray-500 mb-2">{date}</p>
     <p className="mb-2">{content}</p>

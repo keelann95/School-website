@@ -10,7 +10,9 @@ const Paragraph = ({ children }) => (
 );
 
 const ImagePlaceholder = () => (
-  <div className="bg-gray-200 w-full h-64 mb-8"></div>
+  
+    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Nob29sfGVufDB8fDB8fHww" className=' object-cover text-center  w-full h-64 mb-8"' alt="" />
+  
 );
 
 const About = () => {
